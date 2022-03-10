@@ -7,13 +7,17 @@ const getFunction = (idname) => {
 const addLocalStorage = () => {
     const key = getFunction('localStorage-id');
     const value = getFunction('localStorage-value');
-    localStorage.setItem(key, value);
+    if (key && value) {
+        localStorage.setItem(key, value);
+    }
 }
 
 const addSessionStorage = () => {
     const key = getFunction('SessionStorage-id');
     const value = getFunction('SessionStorage-value');
-    sessionStorage.setItem(key, value);
+    if (key && value) {
+        sessionStorage.setItem(key, value);
+    }
 }
 
 // const clearAll = () => {
